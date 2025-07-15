@@ -1,7 +1,7 @@
 # Linear_regression_test
 Below is a detailed report of how we handled the test as a group
 
-Section 1: Exploratory Data Analysis/n
+Section 1: Exploratory Data Analysis\n
 Q1: Load the dataset smartphones.csv using pandas
 Explanation:
 To load the dataset into the notebook, we used the pandas library. The dataset was read using the pd.read_csv() function, which allows us to load CSV files into a pandas DataFrame, making it easy to analyze the data.
