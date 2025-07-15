@@ -93,58 +93,76 @@ We imported essential libraries for performing regression tasks, including Linea
 Q22: Define features X and target y
 Explanation:
 We defined the features X (independent variables) and the target variable y (dependent variable). For this case, we selected ram_capacity, internal_memory, and battery_capacity as features, and price as the target.
+
 Q23: Split data into training and testing sets
 Explanation:
 We split the dataset into training and testing sets using train_test_split. This function takes X and y, along with a test size parameter (e.g., 0.2 for an 80/20 split), to ensure the model is trained on one portion and tested on another, which helps evaluate its performance.
+
 Q24: Train a linear regression model
 Explanation:
 We trained a linear regression model using LinearRegression() from scikit-learn. This model was fitted to the training data (X_train, y_train), learning the relationship between the features and the target variable (price).
+
 Q25: Make predictions on the test set
 Explanation:
 After training the model, we used the predict() method to make predictions on the test set (X_test). These predictions represent the estimated smartphone prices based on the features in the test data.
+
 Q26: Calculate Mean Squared Error (MSE)
 Explanation:
 We calculated the Mean Squared Error (MSE) using the mean_squared_error() function from sklearn.metrics. MSE measures the average of the squares of the errors between the predicted and actual prices, providing an evaluation of the model's accuracy.
+
 Q27: Print R² score
 Explanation:
 We printed the R² score of the model using the score() method. The R² score indicates how well the model's predictions match the actual data, with a value closer to 1 indicating better performance.
+
 Q28: Add a new feature: Price_per_GB = Price / Storage
 Explanation:
 We created a new feature called Price_per_GB, which was calculated by dividing the price by the internal_memory (storage). This new feature helps analyze how the price of a smartphone relates to its storage capacity.
+
 Q29: Scale features using StandardScaler
 Explanation:
 We scaled the features using StandardScaler from sklearn.preprocessing. This standardizes the features by removing the mean and scaling them to unit variance, which can improve the performance of certain machine learning models.
+
 Q30: Try a Decision Tree Regressor
 Explanation:
 We experimented with a Decision Tree Regressor using DecisionTreeRegressor() from sklearn.tree. This model makes predictions by learning simple decision rules inferred from the data, and is particularly useful for non-linear relationships between features and target variables.
 Section 4
+
 Q31: Get feature importances from a trained decision tree
 Explanation:
 After training a Decision Tree Regressor, we extracted the feature importances using the feature_importances_ attribute. This attribute tells us which features (such as RAM, storage, etc.) are most influential in predicting the target variable (price) based on the decision tree model.
+
 Q32: Plot feature importances
 Explanation:
 We plotted the feature importances using a bar plot to visualize which features contribute the most to the predictions of the decision tree model. This helps identify the most important features for predicting smartphone prices.
+
 Q33: Select top 3 features using SelectKBest
 Explanation:
 We used SelectKBest from sklearn.feature_selection to select the top 3 features based on their scores. This technique ranks the features according to their performance in predicting the target variable and selects the most relevant ones for the model.
+
 Q34: Show the score of each feature
 Explanation:
 After selecting the top features with SelectKBest, we examined their scores. These scores are calculated based on statistical tests that evaluate the importance of each feature in relation to the target variable, helping us identify the most predictive attributes.
+
 Q35: Drop irrelevant columns like Model_Name
 Explanation:
 We removed irrelevant columns, such as Model_Name, from the dataset using the drop() function. This helps simplify the model by excluding features that don’t contribute to predicting the target variable.
+
 Q36: Sort data by RAM descending
 Explanation:
 We sorted the dataset by the ram_capacity column in descending order using sort_values(). This helps prioritize phones with higher RAM, which could be more important for performance analysis.
+
 Q37: Filter phones with RAM > 8GB and Battery > 4000mAh
 Explanation:
 We filtered the dataset to include only those smartphones with ram_capacity greater than 8GB and battery_capacity greater than 4000mAh. This is useful for analyzing high-performance smartphones with larger memory and better battery life.
+
 Q38: Group by Brand and get the average of all numeric features
 Explanation:
 We grouped the dataset by brand_name and computed the mean of all numeric features for each brand using groupby() and mean(). This helps summarize how each brand performs across various features, such as price, RAM, and battery capacity.
+
 Q39: Count how many phones have dual SIM support
 Explanation:
 We counted the number of smartphones that have dual SIM support by filtering the dataset where the has_dual_sim column is True and using sum() to calculate the total.
+
 Q40: Create a pairplot to examine pairwise feature trends
 Explanation:
 We created a pairplot using Seaborn’s pairplot() function to examine pairwise relationships between selected features such as ram_capacity, internal_memory, battery_capacity, and price. This helps visualize correlations and trends among multiple features.
