@@ -1,5 +1,6 @@
 # Linear_regression_test
 Below is a detailed report of how we handled the test as a group
+
 Section 1: Exploratory Data Analysis
 Q1: Load the dataset smartphones.csv using pandas
 Explanation:
