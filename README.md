@@ -1,73 +1,95 @@
 # Linear_regression_test
 Below is a detailed report of how we handled the test as a group
 
-Section 1: Exploratory Data Analysis\n
+Section 1: Exploratory Data Analysis
+
 Q1: Load the dataset smartphones.csv using pandas
 Explanation:
 To load the dataset into the notebook, we used the pandas library. The dataset was read using the pd.read_csv() function, which allows us to load CSV files into a pandas DataFrame, making it easy to analyze the data.
+
 Q2: Display the shape of the dataset
 Explanation:
 We used the shape attribute of the DataFrame (df.shape) to display the dimensions of the dataset. This provided the number of rows and columns, helping us understand the dataset's structure. The dataset has 980 rows and 26 columns.
+
 Q3: Show all unique values in the Brand column
 Explanation:
 To identify the unique brands in the dataset, we used the unique() method on the "brand_name" column of the DataFrame. This returned an array containing all distinct values for the brand names across all rows, providing an overview of the different smartphone brands present.
+
 Q4: Check for missing values in the dataset
 Explanation:
 We checked for missing data using the isnull().sum() method, which calculates the number of missing (NaN) values in each column. This helps to identify which attributes in the dataset have incomplete information that might require handling, such as imputation or removal.
+
 Q5: Find the average RAM of all smartphones
 Explanation:
 To find the average RAM capacity of the smartphones, we computed the mean of the "ram_capacity" column using the mean() method. This provided an insight into the general memory configuration of the smartphones in the dataset.
+
 Q6: Check for missing values in the dataset
 Explanation:
 We used the isnull().sum() method to detect missing values in the dataset. This method returns the count of NaN (missing) values for each column, which helps in understanding the completeness of the data. For example, we observed that several columns had missing values, indicating areas for potential data cleaning or imputation.
+
 Q7: Find the average RAM of all smartphones
 Explanation:
 The average RAM was calculated using the mean() function on the "ram_capacity" column. This gave us a numerical representation of the typical RAM capacity in the dataset, which was found to be approximately 6.56 GB.
+
 Q8: Count the number of phones per brand
 Explanation:
 To count the number of phones per brand, we use the value_counts() method on the "Brand" column. This gives us the frequency of each unique brand in the dataset.
 This line will output a count of how many phones belong to each brand, providing insight into the distribution of smartphone brands in the dataset.
+
 Q9: Show the summary statistics for numeric columns
 Explanation:
 To display summary statistics (like mean, standard deviation, min, max, etc.) for the numeric columns, we use the describe() method.
 This function will return a table of descriptive statistics for all numeric columns in the dataset, helping us understand the distribution and range of the numerical features such as price, rating, RAM, and more.
+
 Q10: Which line would show you correlation between numeric columns?
 Explanation:
 To show the correlation between numeric columns, we use the corr() method.
 This will calculate and display the correlation matrix between all numeric columns in the dataset. Values closer to 1 or -1 indicate a strong positive or negative correlation, respectively, while values near 0 indicate little or no correlation.
+
 Q11: Import the required visualization libraries
 Explanation:
 To generate the necessary plots, we installed the seaborn library (if not already installed) and imported both matplotlib.pyplot and seaborn. These libraries are essential for creating advanced plots such as heatmaps, box plots, and scatter plots.
+
 Q12: Plot a histogram of Price
 Explanation:
 To visualize the distribution of smartphone prices, we plotted a histogram using Seaborn or Matplotlib. A histogram is ideal for displaying the frequency of price ranges, helping to identify if most smartphones fall within a specific price range, and also revealing any skewness in the data.
+
 Q13: Create a bar plot showing average price per brand
 Explanation:
 We used Seaborn's barplot() function to calculate and display the average price for each brand. This bar plot groups the data by brand and plots the mean price of smartphones for each brand, helping us understand the price distribution across different manufacturers.
+
 Q14: Plot a heatmap of correlations
 Explanation:
 To visualize the correlation between various features in the dataset, we used Seaborn’s heatmap() function on the correlation matrix of the DataFrame. This heatmap allows us to easily spot which features have strong positive or negative correlations.
+
 Q15: Show the relationship between RAM and Price using a scatter plot
 Explanation:
 We used Matplotlib’s scatter() function to plot the relationship between RAM capacity and price. This scatter plot shows individual data points and helps us visually inspect whether there's a correlation between smartphone RAM and price.
+
 Q16: Create a boxplot to visualize Price distribution across brands
 Explanation:
 We used Seaborn’s boxplot() to display the price distribution for each smartphone brand. This boxplot shows the spread of prices, including the median, quartiles, and potential outliers for each brand.
+
 Q17: Add a title to a plot
 Explanation:
 To add a title to any plot, we used Matplotlib’s plt.title() method. This function takes a string as input and adds it as the title to the plot, enhancing the clarity of the visual.
+
 Q18: Plot a KDE (density plot) of prices
 Explanation:
 We plotted the Kernel Density Estimate (KDE) of the prices using Seaborn's kdeplot() function. This plot helps visualize the distribution of price values as a smooth curve, providing insights into the density of prices at various levels.
+
 Q19: Rotate x-axis labels for readability
 Explanation:
 For better readability, especially when the x-axis labels are long, we used Matplotlib’s plt.xticks(rotation=45) to rotate the x-axis labels by 45 degrees. This makes the labels more readable when they are crowded.
+
 Q20: Save a seaborn plot to a file
 Explanation:
 We saved the Seaborn plot to a file using plt.savefig(). This function allows you to export the plot as an image (e.g., PNG, JPEG), making it easy to share or embed in reports.
+
 Q21: Import the required regression libraries
 Explanation:
 We imported essential libraries for performing regression tasks, including LinearRegression from sklearn.linear_model for linear regression, and train_test_split from sklearn.model_selection to split the dataset into training and testing sets. These libraries are crucial for building and evaluating regression models.
+
 Q22: Define features X and target y
 Explanation:
 We defined the features X (independent variables) and the target variable y (dependent variable). For this case, we selected ram_capacity, internal_memory, and battery_capacity as features, and price as the target.
